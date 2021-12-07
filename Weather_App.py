@@ -34,7 +34,7 @@ exit = False
 while exit == False:
     answer = input("\nPlease enter your city, or type Exit: ")
     
-    if answer.lower() == "exit":
+    if answer == "Exit":
         print("\nOkay, I guess this is goodbye :'(")
         break
     
