@@ -7,10 +7,7 @@ def get_zip(zip_code):
         f"?q={zip_code}&appid=8ff4487d9dc4a13a3dc17413012d68d7")
     x = response.json()
 
-    
-    if x["cod"].lower() == "exit":
-        exit = True
-    elif x["cod"] != "404":
+    if x["cod"] != "404":
         y = x["main"]
         current_temperature = y["temp"]
         current_temperature = (int(current_temperature) - 273.15) * 9/5 + 32
