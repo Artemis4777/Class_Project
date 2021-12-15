@@ -1,7 +1,8 @@
-#import modules
+#import module
 import requests
 
-print("Welcome to the best discount weather app!")
+print("\nWelcome to the best discount weather app which is actually free. "
+    "\nFree would imply that you are the product.")
 
 #main function
 def get_zip(zip_code):
@@ -30,19 +31,19 @@ def get_zip(zip_code):
             d5_temp_high = x["list"][4]["main"]["temp_max"]
             d5_temp_low = x["list"][4]["main"]["temp_min"]
             d5_temp_info = x["list"][4]["weather"][0]["description"]
-            print(f"Tomorrow there will a high of {d1_temp_high}, with a low of"
+            print(f"\nTomorrow there will a high of {d1_temp_high}, with a low of"
             f" {d1_temp_low} degrees. There will also be {d1_temp_info}.")
-            print(f"On day two there will be a high of {d2_temp_high}, and a"
+            print(f"On the following day there will be a high of {d2_temp_high}, and a"
             f" low of {d2_temp_low} degrees. There will also be {d2_temp_info}.")
             print(f"On day three there will be a high of {d3_temp_high}, and a"
             f" low of {d3_temp_low} degrees. There will also be {d3_temp_info}.")
-            print(f"On day four there will be a high of {d4_temp_high}, and a"
+            print(f"On the day after that there will be a high of {d4_temp_high}, and a"
             f" low of {d4_temp_low} degrees. There will also be {d4_temp_info}.")
-            print(f"On day five there will be a high of {d5_temp_high}, and a"
+            print(f"On the fifth day there will be a high of {d5_temp_high}, and a"
             f" low of {d5_temp_low} degrees. There will also be {d5_temp_info}.")
 
         else:
-            print(" City Not Found ")
+            print("STRIKE! Try again. This time use a real zip code ;)")
 
 #to keep the program in a loop
 exit = False
